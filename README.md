@@ -19,3 +19,11 @@ While the latter uses sophisticated methods to do so at the cost of performance.
 However, this library is far from perfect. 
 For example, it has a hard time picking up on less common variants of swear words 
 like "f4ck you" or "you b1tch" because they don't appear often enough in the training corpus.
+
+predict() checks the comment if it has profane language or not, if it doesn't degree of profanity is 0.
+If it is profane then the degree of profanity is benchmarked to predict_prob()
+which returns the probability of a string being offensive, the offensiveness is determined by the model 
+as which words are "bad" and how "bad" they are because those words will appear more often in offensive texts. 
+Thus, it's as if the training process is picking out the "bad" words out of all possible words and using those to make future predictions.
+
+Thereby, the task is accomplished with thoughtful application of relevant libraries.
